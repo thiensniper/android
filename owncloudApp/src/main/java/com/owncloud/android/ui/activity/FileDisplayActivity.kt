@@ -899,10 +899,10 @@ class FileDisplayActivity : FileActivity(), FileFragment.ContainerActivity, OnEn
             val synchFolderRemotePath = intent.getStringExtra(FileSyncAdapter.EXTRA_FOLDER_PATH)
             val serverVersion = intent.getParcelableExtra<OwnCloudVersion>(FileSyncAdapter.EXTRA_SERVER_VERSION)
 
-            if (serverVersion != null && !serverVersion.isServerVersionSupported) {
-                Timber.d("Server version not supported")
-                showRequestAccountChangeNotice(getString(R.string.server_not_supported), true)
-            }
+//            if (serverVersion != null && !serverVersion.isServerVersionSupported) {
+//                Timber.d("Server version not supported")
+//                showRequestAccountChangeNotice(getString(R.string.server_not_supported), true)
+//            }
 
             val synchResult = intent.getSerializableExtra(FileSyncAdapter.EXTRA_RESULT) as? RemoteOperationResult<*>
             val sameAccount = account != null && accountName == account.name && storageManager != null
